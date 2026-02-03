@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surat</title>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<style>
+  body {
+    background: #f0e6d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Nanum Pen Script', cursive;
+  }
+
+  .envelope {
+    width: 400px;
+    max-width: 90%;
+    height: 300px;
+    background: #fff8f0;
+    border: 2px solid #d1bfa7;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+
+  .envelope::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 100px solid #d1bfa7;
+    top: -100px;
+    left: 0;
+    transition: all 0.5s ease;
+  }
+
+  .envelope.open::before {
+    top: -50px;
+    transform: rotateX(180deg);
+  }
+
+  .letter {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+  }
+
+  .envelope.open .letter {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+<div class="envelope" onclick="this.classList.toggle('open')">
+  <div class="letter">
+    <h1>Surat</h1>
+    <p>Aku menulis ini di malam yang sunyi, ketika dunia seakan berhenti sejenak dan hanya suara pikiranku yang terdengar.  
+    Ada banyak hal yang ingin kubagikan, tapi kata-kata selalu terasa terlalu kecil untuk menampung semua rasa yang muncul.</p>
+
+    <p>Hari-hari berjalan dengan ritme yang sama, kadang membingungkan, kadang menenangkan. Ada pagi yang terasa berat di dada,  
+    ada senja yang membawa ketenangan. Aku belajar bahwa tidak setiap langkah harus sempurna, dan tidak setiap kesalahan harus disesali.  
+    Kadang membiarkan diri sendiri tersesat sedikit adalah bagian dari menemukan jalan kembali.</p>
+
+    <p>Ada orang-orang yang datang dan pergi tanpa peringatan. Ada yang meninggalkan jejak hangat, ada yang pergi begitu saja.  
+    Aku mencoba mengingat semuanya dengan lembut, karena bahkan kehilangan pun mengajari sesuatu—tentang kesabaran, tentang melepaskan,  
+    tentang menghargai waktu yang kita punya sekarang.</p>
+
+    <p>Beberapa hari terasa hampa, seolah waktu berjalan lambat, dan aku hanya menunggu sesuatu yang tidak pasti.  
+    Tapi di saat-saat itu, aku menyadari bahwa setiap detik berharga, bahkan yang terasa biasa.  
+    Ada keindahan dalam hal-hal kecil: secangkir teh hangat, hujan yang menetes di jendela, tawa yang terdengar jauh.</p>
+
+    <p>Ketika aku menulis ini, aku berharap surat ini tidak hanya untuk diriku sendiri.  
+    Semoga siapa pun yang membacanya bisa merasa sedikit dimengerti, atau menemukan keberanian untuk menghadapi hari mereka.  
+    Hidup kadang berat, tapi bukan berarti harus dilalui sendiri. Kadang hanya dengan membiarkan diri merasakan,  
+    kita sudah melakukan langkah terbesar untuk sembuh dan terus melangkah.</p>
+
+    <p>Jika kau membaca ini, ingatlah: tidak apa-apa untuk lambat, tidak apa-apa untuk tersandung, dan tidak apa-apa untuk meminta waktu.  
+    Setiap hari adalah halaman kosong lain, dan setiap tindakan kecil adalah tinta yang menulis cerita.  
+    Jangan takut untuk membuka amplop itu, meski isinya hanya kata-kata sederhana. Karena di balik setiap kata, ada niat untuk tetap melanjutkan.</p>
+
+    <p>Aku menutup surat ini dengan satu hal yang sederhana tapi penting:  
+    Berikan dirimu ruang untuk bernapas, ruang untuk merasa, dan ruang untuk percaya bahwa semua ini,  
+    dengan cara atau waktu yang misterius, akan menemukan tempatnya sendiri.</p>
+  </div>
+</div>
+</body>
+</html>
